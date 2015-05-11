@@ -32,12 +32,13 @@ var main = function () {
         e.preventDefault();
         $(this).tab('show')
     });
+
     $('.tabs a').toArray().forEach(function (element) {
         $(element).on("click", function () {
             var $element = $(element);
             var $con;
             $(".tabs a").removeClass("active");
-            $("main .tab-content").empty();
+            $("main .tab-content ul").empty();
             $element.addClass("active");
             if ($element.parent().is(":nth-child(1)")) {
                 $con = $("<ul>");
